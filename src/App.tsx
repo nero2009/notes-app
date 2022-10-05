@@ -5,9 +5,7 @@ import Note from './components/Note';
 import './App.css';
 import Trash from './components/Trash';
 import { NoteObject } from './types';
-
-
-const NOTE_COLORS = ['#e76f51', '#f4a261', '#e9c46a', '#2a9d8f', '#bbd0ff', '#8ac926', '#005f73'];
+import { NOTE_COLORS } from './constants';
 
 function App() {
 	const [notes, setNotes] = useState<NoteObject[]>([]);
