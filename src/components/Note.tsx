@@ -1,11 +1,5 @@
 import { DragEvent } from 'react';
-
-interface NoteObject {
-	id: string;
-	text: string;
-	position: { top: number; left: number };
-  color: string
-}
+import { NoteObject } from '../types';
 
 interface Props {
 	note: NoteObject;

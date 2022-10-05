@@ -4,18 +4,13 @@ import CreateNote from './components/CreateNote';
 import Note from './components/Note';
 import './App.css';
 import Trash from './components/Trash';
+import { NoteObject } from './types';
 
-interface Note {
-	id: string;
-	text: string;
-	position: { top: number; left: number };
-	color: string;
-}
 
 const NOTE_COLORS = ['#e76f51', '#f4a261', '#e9c46a', '#2a9d8f', '#bbd0ff', '#8ac926', '#005f73'];
 
 function App() {
-	const [notes, setNotes] = useState<Note[]>([]);
+	const [notes, setNotes] = useState<NoteObject[]>([]);
 	const [text, setText] = useState<string>('');
 	const [activeDraggedNoteID, setActiveDraggedNoteID] = useState<string | undefined>(undefined);
 	const [isInDeleteArea, setIsInDeleteArea] = useState<boolean>(false);
@@ -24,7 +19,7 @@ function App() {
 		if (text.length <= 0) {
 			return;
 		}
-		const noteObject: Note = {
+		const noteObject: NoteObject = {
 			id: v4(),
 			text: text,
 			position: {
