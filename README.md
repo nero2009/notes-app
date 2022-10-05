@@ -26,3 +26,8 @@ We also have a few state in this application.
 - `isInDeleteArea` (boolean) : A boolean to know when a note is dragged over the trash area.
 
 - `activeDraggedNoteID` (string) : Id of the currently dragged note
+
+
+#### Run
+
+`yarn start`
