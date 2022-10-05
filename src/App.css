@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+* {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+		'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app {
+	min-height: 100vh;
+	height: 100%;
+	margin: 0;
+	display: flex;
 }
 
-.App-link {
-  color: #61dafb;
+.note-input-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid #eee;
+	padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.notes {
+	flex: 5;
+	position: relative;
+}
+
+.note {
+	position: absolute;
+	cursor: pointer;
+	background-color: yellow;
+	background-size: cover;
+	top: 100px;
+	left: 300px;
+	height: 200px;
+	width: 200px;
+	padding: 20px;
+	box-shadow: 0 3px 5px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+	resize: both;
+	overflow: auto;
+  word-wrap: break-word;
+}
+
+.note-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.note-input {
+	min-width: 100%;
+	max-width: 100%;
+	padding: 5px;
+}
+
+.droppable {
+	position: absolute;
+	bottom: 0;
+	width: '100%';
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	color: white;
+}
+
+.note-button {
+	width: 100%;
+	background-color: #fff27f;
+	cursor: pointer;
+	padding: 10px;
+	border: 0;
+	outline: none;
+}
+
+.note-button:hover {
+	background-color: skyblue;
+}
+
+.red-background {
+	background: red;
+}
+
+.green-background {
+	background: green;
 }
